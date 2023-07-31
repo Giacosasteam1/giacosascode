@@ -1,2 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>QR Code</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+<style>
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #012f3c;
+    }
 
+    .container {
+        position: relative;
+        text-align: center;
+    }
+
+    img {
+        max-width: 170%;
+        max-height: 170%;
+        transition: transform 1s ease-in-out;
+        margin-top: -2cm;
+    }
+
+    .button-container {
+        position: absolute;
+        top: calc(50% + 4cm);
+        left: calc(50% + 0.1px); 
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        animation: fadeIn 2.7s ease-in-out;
+    }
+    
+    .button {
+        font-family: 'Arial', sans-serif;
+        background-color: #b8a793;
+        color: #ffffff;
+        border: 2px solid #9e917f;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        font-size: 24px;
+        width: 180px;
+    }
+
+    .button:hover {
+        background-color: #9e917f;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <img id="logo" src="https://i.postimg.cc/RV35kDpy/IMG-0505.jpg" alt="Logo" style="max-width: 170%; max-height: 170%; transition: transform 1s ease-in-out; transform: scale(1.50);">
+        <div class="button-container" style="display: none; top: calc(50% + 4cm);">
+            <button class="btn btn-primary button" onclick="selectLanguage('Italian')">Italian</button>
+            <button class="btn btn-primary button" onclick="selectLanguage('English')">English</button>
+        </div>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        setTimeout(function() {
+            var buttonContainer = document.querySelector('.button-container');
+            buttonContainer.style.display = 'flex';
+            buttonContainer.classList.add('animated', 'fadeIn');
+
+            var logo = document.getElementById('logo');
+            logo.style.transform = 'translateY(-1.5cm)';
+        }, 1200);
+
+        function selectLanguage(language) {
+            if (language === "Italian") {
+                window.location.href = "https://www.flipsnack.com/B6995CDD75E/dove-andare/full-view.html";
+            } else if (language === "English") {
+                window.location.href = "https://www.flipsnack.com/B6995CDD75E/where-to-go/full-view.html";
+            }
+
+            var audioElement = new Audio();
+
+            var audioSources = [
+                "Gorillaz - Feel Good Inc.mp3",
+                "Gorillaz - Feel Good Inc.ogg",
+                "Gorillaz - Feel Good Inc.wav"
+            ];
+
+            for (var i = 0; i < audioSources.length; i++) {
+                var source = document.createElement('source');
+                source.src = audioSources[i];
+                audioElement.appendChild(source);
+            }
+
+            document.body.appendChild(audioElement);
+            audioElement.play();
+        }
+    </script>
+</body>
 </html>
