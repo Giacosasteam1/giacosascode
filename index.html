@@ -83,27 +83,10 @@
 
         function selectLanguage(language) {
             if (language === "Italian") {
-                window.location.href = "https://www.flipsnack.com/B6995CDD75E/dove-andare-vzjymfjzhm/full-view.html";
+                window.location.href = "https://drive.google.com/file/d/10kslrGu0JS5bhVCwWQqELIb9VkLNdEdl/view?usp=drivesdk";
             } else if (language === "English") {
-                window.location.href = "https://www.flipsnack.com/B6995CDD75E/where-to-go-uplra2lpma/full-view.html";
+                window.location.href = "https://drive.google.com/file/d/14R8UUbibVIR39iITPWAyZC0D_GZxOANV/view?usp=drivesdk";
             }
-
-            var audioElement = new Audio();
-
-            var audioSources = [
-                "Gorillaz - Feel Good Inc.mp3",
-                "Gorillaz - Feel Good Inc.ogg",
-                "Gorillaz - Feel Good Inc.wav"
-            ];
-
-            for (var i = 0; i < audioSources.length; i++) {
-                var source = document.createElement('source');
-                source.src = audioSources[i];
-                audioElement.appendChild(source);
-            }
-
-            document.body.appendChild(audioElement);
-            audioElement.play();
         }
     </script>
 </body>
