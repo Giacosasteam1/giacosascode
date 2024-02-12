@@ -1,93 +1,257 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>QR Code</title>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interfaccia</title>
 <style>
-    body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-        background-color: #012f3c;
-    }
+  /* Reset dei margini e dei padding */
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-    .container {
-        position: relative;
-        text-align: center;
+  @keyframes moveImage {
+    0% {
+      transform: translate(-50%, -50%) scale(1.05); /* Dimensione e posizione iniziali */
     }
+    100% {
+      transform: translate(-50%, -60%) scale(0.8); /* Dimensione e posizione finali */
+    }
+  }
 
-    img {
-        max-width: 170%;
-        max-height: 170%;
-        transition: transform 1s ease-in-out;
-        margin-top: -2cm;
-    }
+  .e13_35 { 
+    overflow: hidden;
+    background-color: rgba(1.0000000591389835, 48.000000938773155, 58.00000034272671, 1);
+    width: 393px;
+    height: 858px;
+    position: relative; /* Posizionamento relativo per posizionare l'immagine */
+  }
 
-    .button-container {
-        position: absolute;
-        top: calc(50% + 4cm);
-        left: calc(50% + 0.1px); 
-        transform: translate(-50%, -50%);
-        display: flex;
-        justify-content: center;
-        gap: 14px;
-        animation: fadeIn 2.7s ease-in-out;
-    }
-    
-    .button {
-        font-family: 'Arial', sans-serif;
-        background-color: #b8a793;
-        color: #ffffff;
-        border: 2px solid #9e917f;
-        border-radius: 12px;
-        cursor: pointer;
-        transition: background-color 0.3s ease-in-out;
-        font-size: 24px;
-        width: 180px;
-    }
+  .e16_72 {
+    width: 420px;
+    height: 852px;
+    position: absolute;
+    left: 50%;
+    top: calc(50% - 430px); /* Altezza del logo divisa per 2 */
+    transform: translateX(-50%);
+  }
 
-    .button:hover {
-        background-color: #9e917f;
-    }
+  .e16_72 img {
+    width: 400px; /* Dimensioni iniziali */
+    height: 400px; /* Dimensioni iniziali */
+    animation: moveImage 2.5s forwards; /* Aggiunta dell'animazione all'immagine */
+    position: absolute; /* Posizionamento assoluto per sovrapporre l'immagine */
+    top: 50%; /* Posiziona l'immagine al centro verticalmente */
+    left: 50%; /* Posiziona l'immagine al centro orizzontalmente */
+    transform: translate(-50%, -50%); /* Posizionamento iniziale */
+  }
 
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-        }
+  .e16_85 { 
+    width: 420px;
+    height: 68.9774169921875px;
+    position: absolute;
+    left: 0px;
+    top: 785px;
+  }
+
+  .e16_76 { 
+    width: 420px;
+    height: 61px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .e63_22 { 
+    background-color: rgba(255, 255, 255, 1);
+    width: 420px;
+    height: 2px;
+    position: absolute;
+    left: 0px;
+    top: 6px;
+  }
+
+  .e63_4 { 
+    background-color: rgba(255, 255, 255, 1);
+    width: 420px;
+    height: 2px;
+    position: absolute;
+    left: 0px;
+    top: 50.75px;
+  }
+
+  .e63_3 { 
+    background-color: rgba(255, 255, 255, 1);
+    width: 420px;
+    height: 2px;
+    position: absolute;
+    left: 0px;
+    top: 68.25px;
+  }
+
+  .e16_74 { 
+    width: 420px;
+    height: 63.774105072021484px;
+    position: absolute;
+    left: 1.1368683772161603e-13px;
+    top: 779px;
+  }
+
+  .e13_38 { 
+    background-color: rgba(184.00000423192978, 167.00000524520874, 147.00000643730164, 1);
+    width: 420px;
+    height: 9.002185821533203px;
+    position: absolute;
+    left: 0px;
+    top: 71px;
+  }
+
+  .e13_39 {
+    background-color: rgba(184.00000423192978, 167.00000524520874, 147.00000643730164, 1);
+    width: 420px;
+    height: 9px;
+    position: absolute;
+    left: 0px;
+    top: 17px; /* Modificato il valore top */
+  }
+
+  .e16_75 { 
+    width: 420px;
+    height: 64.25px;
+    position: absolute;
+    left: 0px;
+    top: 6px;
+  }
+
+  .e63_24 { 
+    background-color: rgba(255, 255, 255, 1);
+    width: 420px;
+    height: 2px;
+    position: absolute;
+    left: 0px;
+    top: 785px;
+  }
+
+  .e63_23 { 
+    background-color: rgba(255, 255, 255, 1);
+    width: 420px;
+    height: 2px;
+    position: absolute;
+    left: 0px;
+    top: 802.46px;
+  }
+
+  .e63_25 { 
+    background-color: rgba(255, 255, 255, 1);
+    width: 420px;
+    height: 2px;
+    position: absolute;
+    left: 0px;
+    top: 844px;
+  }
+
+  .e16_73 { 
+    width: 420px;
+    height: 65px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .e13_36 { 
+    background-color: rgba(184.00000423192978, 167.00000524520874, 147.00000643730164, 1);
+    width: 420px;
+    height: 6px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .e13_37 { 
+    background-color: rgba(184.00000423192978, 167.00000524520874, 147.00000643730164, 1);
+    width: 420px;
+    height: 9px;
+    position: absolute;
+    left: 0px;
+    top: 56px;
+  }
+
+  /* Stili per i pulsanti */
+  .button-container {
+    position: absolute;
+    top: calc(50% + 210px); /* Altezza del logo + spazio tra logo e pulsanti */
+    left: 50%; /* Centrato orizzontalmente */
+    transform: translateX(-50%); /* Centrato orizzontalmente */
+    display: flex;
+    justify-content: center;
+    gap: 29px; /* Spazio orizzontale tra i pulsanti */
+    animation: fadeIn 2.7s ease-in-out;
+  }
+
+  .button {
+    font-family: 'Lora';
+    background-color: #b8a793;
+    color: #ffffff;
+    border: 2 px solid #ffffff;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 28px;
+    min-width: 130px; /* Larghezza minima per mantenere il testo centrato */
+    display: flex; /* Usa flexbox per centrare il testo */
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 8px 18px; /* Ridotto lo spazio sopra e sotto il testo */
+  }
+
+  .button:hover {
+    background-color: #9e917f;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
     }
+    100% {
+      opacity: 1;
+    }
+  }
 </style>
 </head>
 <body>
-    <div class="container">
-        <img id="logo" src="https://i.postimg.cc/RV35kDpy/IMG-0505.jpg" alt="Logo" style="max-width: 170%; max-height: 170%; transition: transform 1s ease-in-out; transform: scale(1.50);">
-        <div class="button-container" style="display: none; top: calc(50% + 4cm);">
-            <button class="btn btn-primary button" onclick="selectLanguage('Italian')">Italian</button>
-            <button class="btn btn-primary button" onclick="selectLanguage('English')">English</button>
-        </div>
+  <div class="e13_35">
+    <div class="e16_72">
+      <img src="https://i.postimg.cc/RV35kDpy/IMG-0505.jpg" alt="Immagine">
     </div>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"></script>
-    <script>
-        setTimeout(function() {
-            var buttonContainer = document.querySelector('.button-container');
-            buttonContainer.style.display = 'flex';
-            buttonContainer.classList.add('animated', 'fadeIn');
-
-            var logo = document.getElementById('logo');
-            logo.style.transform = 'translateY(-1.5cm)';
-        }, 1200);
-
-        function selectLanguage(language) {
-            if (language === "Italian") {
-                window.location.href = "https://drive.google.com/file/d/10kslrGu0JS5bhVCwWQqELIb9VkLNdEdl/view?usp=drivesdk";
-            } else if (language === "English") {
-                window.location.href = "https://drive.google.com/file/d/14R8UUbibVIR39iITPWAyZC0D_GZxOANV/view?usp=drivesdk";
-            }
-        }
-    </script>
+    <div class="e16_85"></div>
+    <div class="e16_76">
+      <div class="e63_22"></div>
+      <div class="e63_4"></div>
+      <div class="e63_3"></div>
+    </div>
+    <div class="e16_74">
+      <div class="e13_38"></div>
+      <div class="e13_39"></div>
+    </div>
+    <div class="e16_83">
+      <div class="e16_75">
+        <div class="e63_24"></div>
+        <div class="e63_23"></div>
+        <div class="e63_25"></div>
+      </div>
+      <div class="e16_73">
+        <div class="e13_36"></div>
+        <div class="e13_37"></div>
+      </div>
+    </div>
+    <!-- Pulsanti -->
+    <div class="button-container">
+      <button class="button" onclick="window.location.href='https://drive.google.com/file/d/10kslrGu0JS5bhVCwWQqELIb9VkLNdEdl/view?usp=drivesdk'">ITALIAN</button>
+      <button class="button" onclick="window.location.href='https://drive.google.com/file/d/14R8UUbibVIR39iITPWAyZC0D_GZxOANV/view?usp=drivesdk'">ENGLISH</button>
+    </div>
+  </div>
 </body>
 </html>
