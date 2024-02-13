@@ -26,7 +26,7 @@
     overflow: hidden;
     background-color: rgba(1.0000000591389835, 48.000000938773155, 58.00000034272671, 1);
     width: 393px;
-    height: 700px;
+    height: 675px;
     position: relative; /* Posizionamento relativo per posizionare l'immagine */
   }
 
@@ -66,7 +66,7 @@
   }
 
   .e63_22 { 
-    background-color: rgba(1.0000000591389835, 48.000000938773155, 58.00000034272671, 1);
+    background-color: rgba(255, 255, 255, 1);
     width: 420px;
     height: 2px;
     position: absolute;
@@ -101,13 +101,12 @@
   }
 
   .e13_38 { 
-    background-color: rgba( 
-1.0000000591389835, 48.000000938773155, 58.00000034272671, 1);
+    background-color: rgba(184.00000423192978, 167.00000524520874, 147.00000643730164, 1);
     width: 420px;
     height: 9.002185821533203px;
     position: absolute;
     left: 0px;
-    top: -88px;
+    top: -113px;
   }
 
   .e13_39 {
@@ -116,7 +115,7 @@
     height: 9px;
     position: absolute;
     left: 0px;
-    top: -141px; /* Modificato il valore top */
+    top: -176px; /* Modificato il valore top */
   }
 
   .e16_75 { 
@@ -133,16 +132,16 @@
     height: 2px;
     position: absolute;
     left: 0px;
-    top: 644px;
+    top: 609px;
   }
 
   .e63_23 { 
-    background-color: rgba(1.0000000591389835, 48.000000938773155, 58.00000034272671, 1);
+    background-color: rgba(255, 255, 255, 1);
     width: 420px;
     height: 2px;
     position: absolute;
     left: 0px;
-    top: 683px;
+    top: 658px;
   }
 
   .e63_25 { 
@@ -151,7 +150,7 @@
     height: 2px;
     position: absolute;
     left: 0px;
-    top: 627px;
+    top: 592px;
   }
 
   .e16_73 { 
@@ -163,7 +162,7 @@
   }
 
   .e13_36 { 
-    background-color: rgba(1.0000000591389835, 48.000000938773155, 58.00000034272671, 1);
+    background-color: rgba(184.00000423192978, 167.00000524520874, 147.00000643730164, 1);
     width: 420px;
     height: 6px;
     position: absolute;
@@ -178,6 +177,28 @@
     position: absolute;
     left: 0px;
     top: 56px;
+  }
+
+  /* Aggiunta dell'animazione per gli elementi specificati */
+  .animated-element {
+    opacity: 0;
+    animation: slideFromRight 1.5s forwards;
+  }
+
+  @keyframes slideFromRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* Assegna le classi animate agli elementi desiderati */
+  .e63_22, .e63_23, .e63_24, .e63_25, .e63_4, .e63_3, .e13_38, .e13_39, .e13_36, .e13_37 {
+    animation-delay: 0.5s; /* Ritarda l'animazione di 0.5 secondi rispetto all'inizio */
   }
 
   /* Stili per i pulsanti */
@@ -229,23 +250,23 @@
     </div>
     <div class="e16_85"></div>
     <div class="e16_76">
-      <div class="e63_22"></div>
-      <div class="e63_4"></div>
-      <div class="e63_3"></div>
+      <div class="e63_22 animated-element"></div>
+      <div class="e63_4 animated-element"></div>
+      <div class="e63_3 animated-element"></div>
     </div>
     <div class="e16_74">
-      <div class="e13_38"></div>
-      <div class="e13_39"></div>
+      <div class="e13_38 animated-element"></div>
+      <div class="e13_39 animated-element"></div>
     </div>
     <div class="e16_83">
       <div class="e16_75">
-        <div class="e63_24"></div>
-        <div class="e63_23"></div>
-        <div class="e63_25"></div>
+        <div class="e63_24 animated-element"></div>
+        <div class="e63_23 animated-element"></div>
+        <div class="e63_25 animated-element"></div>
       </div>
       <div class="e16_73">
-        <div class="e13_36"></div>
-        <div class="e13_37"></div>
+        <div class="e13_36 animated-element"></div>
+        <div class="e13_37 animated-element"></div>
       </div>
     </div>
     <!-- Pulsanti -->
